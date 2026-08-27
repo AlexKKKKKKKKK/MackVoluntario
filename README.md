@@ -15,8 +15,17 @@ Além disso alguns requisitos foram levantados:
 
 ## 2. Protótipo Inicial
 
+### Home
 
+![Home](Home.png)
 
+### Busca
+
+![Busca](Busca.png)
+
+### Informções sobre o projeto
+
+![Info](Info.png)
 ## 3. Caráter Extensionista
 
 O projeto possui caráter extensionista por buscar aplicar os conhecimentos adquiridos durante a formação acadêmica na resolução de uma necessidade presente na sociedade.
