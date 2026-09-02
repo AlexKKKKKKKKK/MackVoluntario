@@ -17,22 +17,22 @@ Além disso alguns requisitos foram levantados:
 
 ### Home
 
-![Home](Home.png)
+![Home](./docs/images/Home.png)
 
 ### Busca
 
-![Busca](Busca.png)
+![Busca](./docs/images/Busca.png)
 
-### Informções sobre o projeto
+### Informações sobre o projeto
 
-![Info](Info.png)
+![Info](./docs/images/Info.png)
 ## 3. Caráter Extensionista
 
 O projeto possui caráter extensionista por buscar aplicar os conhecimentos adquiridos durante a formação acadêmica na resolução de uma necessidade presente na sociedade.
 
 A proposta da plataforma está relacionada à promoção do voluntariado e ã aproximação entre a comunidade e iniciativas sociais.
 
-Por meio da aplicaçào, buscamos contribuir para que mais pessoas tenham acesso a oportunidades de participação em projetos sociais, incentivando valores como:
+Por meio da aplicação, buscamos contribuir para que mais pessoas tenham acesso a oportunidades de participação em projetos sociais, incentivando valores como:
 
 * Cidadania
 * Solidariedade
