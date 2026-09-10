@@ -1,24 +1,22 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MackVoluntario</title>
-
-    <link rel="stylesheet" href="./src/styles/main.css">
+    <link rel="stylesheet" href="src/styles/home.css">
 </head>
 <body>
-    <header>
+    <header id="page-header">
         Imagem
-        <nav>
-            <button>Sobre</button>
-            <button>Contato</button>
-            <button>Entrar</button>
+        <nav id="header-nav">
+            <button class="header-button">Sobre</button>
+            <button class="header-button">Contato</button>
+            <button class="header-button" id="sign-in-button">Entrar</button>
         </nav>
     </header>
-    <hr>
     <main>
-        <section>
+        <section id="main-page-section">
             <section>
                 <h1>Faça a diferença na sua comunidade</h1>
                 <p>Encontre projetos de voluntariado, conecte-se com organizações locais e transforme vidas.</p>
@@ -26,53 +24,52 @@
                 <button>Buscar</button>
             </section>
         </section>
-        <section>
+        <section id="main-text">
             <h2>Projetos em destaque</h2>
             <p>Descubra oportundiades para começar a fazer a diferença hoje mesmo.</p>
         </section>
-        <section>
-            <article>
-                <header>
+        <section id="cards-section">
+            <article >
+                <header class="card-header">
                     <h3>Biblioteca comunitária</h3>
-                    <div>Educação</div>
+                    <div class="tag">Educação</div>
                 </header>
-                <main>
+                <main class="card-main">
                     <p>Ajude na organização de livros e no atendimento de crianças em atividade de leitura e contação de histórias.</p>
                 </main>
-                <footer>
+                <footer class="card-footer">
                     <div>Imagem</div>
                     <p>São Paulo - 4h/semana</p>
                 </footer>
             </article>
             <article>
-                <header>
+                <header class="card-header">
                     <h3>Acolhimento de idosos</h3>
-                    <div>Comunidade</div>
+                    <div class="tag">Comunidade</div>
                 </header>
-                <main>
+                <main class="card-main">
                     <p>Faça visitas, compartilhe histórias e ofereça companhia em um abrigo local, promovendo bem-estar e conexão</p>
                 </main>
-                <footer>
+                <footer class="card-footer">
                     <div>Imagem</div>
                     <p>Campinas - 2h/semana</p>
                 </footer>
             </article>
             <article>
-                <header>
+                <header class="card-header">
                     <h3>Limpeza de praia</h3>
-                    <div>Meio ambiente</div>
+                    <div class="tag">Meio ambiente</div>
                 </header>
-                <main>
+                <main class="card-main">
                     <p>Participe de mutirões de limpeza, educação ambiental e monitoramento de resíduos em parceria com uma ONG local.</p>
                 </main>
-                <footer>
+                <footer class="card-footer">
                     <div>Imagem</div>
                     <p>Santos - 1 dia/mês</p>
                 </footer>
             </article>
         </section>
     </main>
-    <hr>
-    <footer></footer>
+    <footer id="page-footer"></footer>
 </body>
 </html>
