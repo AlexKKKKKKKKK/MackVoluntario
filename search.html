@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MackVoluntario</title>
-
-    <link rel="stylesheet" href="./src/styles/main.css">
+  <meta charset="UTF-8">
+  <title>MackVoluntário</title>
+  <link rel="stylesheet" href="search.css">
 </head>
 <body>
 
-  <h1>MackVoluntário</h1>
-  <p>Projetos | Sobre | Contato | Entrar</p>
+  <div id="page-header">
+    <h1>MackVoluntário</h1>
+    <div id="header-nav">
+      <button class="header-button">Projetos</button>
+      <button class="header-button">Sobre</button>
+      <button class="header-button">Contato</button>
+      <button class="header-button" id="sign-in-button">Entrar</button>
+    </div>
+  </div>
 
   <hr>
 
@@ -32,35 +37,70 @@
 
   <hr>
 
-  <h3>Reforço Escolar para Crianças (Educação)</h3>
-  <p>Acompanhe estudantes do ensino fundamental em atividades de reforço, auxiliando na resolução de exercícios e fortalecendo a confiança acadêmica.</p>
-  <p>São Paulo - 3h/semana</p>
-  <p>12 voluntários já se inscreveram</p>
-  <p>Organização: Centro Comunitário Vida Nova</p>
+  <div id="cards-section">
 
-  <hr>
+    <article class="card">
+      <div class="card-header">
+        <h3>Reforço Escolar para Crianças</h3>
+        <span class="tag">Educação</span>
+      </div>
+      <div class="card-main">
+        <p>Acompanhe estudantes do ensino fundamental em atividades de reforço, auxiliando na resolução de exercícios e fortalecendo a confiança acadêmica.</p>
+        <p>São Paulo - 3h/semana</p>
+      </div>
+      <div class="card-footer">
+        <p>12 voluntários já se inscreveram</p>
+        <p>Organização: Centro Comunitário Vida Nova</p>
+      </div>
+    </article>
 
-  <h3>Horta Comunitária Sustentável (Meio Ambiente)</h3>
-  <p>Ajude na manutenção de uma horta urbana, plantando mudas, preparando solo e promovendo educação ambiental para a comunidade local.</p>
-  <p>Campinas - 2h/semana</p>
-  <p>8 voluntários já se inscreveram</p>
-  <p>Organização: Associação Verde</p>
+    <article class="card">
+      <div class="card-header">
+        <h3>Horta Comunitária Sustentável</h3>
+        <span class="tag">Meio Ambiente</span>
+      </div>
+      <div class="card-main">
+        <p>Ajude na manutenção de uma horta urbana, plantando mudas, preparando solo e promovendo educação ambiental para a comunidade local.</p>
+        <p>Campinas - 2h/semana</p>
+      </div>
+      <div class="card-footer">
+        <p>8 voluntários já se inscreveram</p>
+        <p>Organização: Associação Verde</p>
+      </div>
+    </article>
 
-  <hr>
+    <article class="card">
+      <div class="card-header">
+        <h3>Campanha de Doação de Sangue</h3>
+        <span class="tag">Saúde</span>
+      </div>
+      <div class="card-main">
+        <p>Acompanhe doadores, forneça apoio emocional e ajude na organização de materiais durante a campanha mensal no hemocentro.</p>
+        <p>Santos - 1 dia/mês</p>
+      </div>
+      <div class="card-footer">
+        <p>15 voluntários já se inscreveram</p>
+        <p>Organização: Hemocentro Regional</p>
+      </div>
+    </article>
 
-  <h3>Campanha de Doação de Sangue (Saúde)</h3>
-  <p>Acompanhe doadores, forneça apoio emocional e ajude na organização de materiais durante a campanha mensal no hemocentro.</p>
-  <p>Santos - 1 dia/mês</p>
-  <p>15 voluntários já se inscreveram</p>
-  <p>Organização: Hemocentro Regional</p>
+    <article class="card">
+      <div class="card-header">
+        <h3>Apoio a Famílias Refugiadas</h3>
+        <span class="tag">Comunidade</span>
+      </div>
+      <div class="card-main">
+        <p>Ofereça suporte linguístico e social, auxiliando na integração de famílias refugiadas na comunidade local e no acesso a serviços básicos.</p>
+        <p>São Paulo - 4h/semana</p>
+      </div>
+      <div class="card-footer">
+        <p>10 voluntários já se inscreveram</p>
+        <p>Organização: Casa do Migrante</p>
+      </div>
+    </article>
 
-  <hr>
-
-  <h3>Apoio a Famílias Refugiadas (Comunidade)</h3>
-  <p>Ofereça suporte linguístico e social, auxiliando na integração de famílias refugiadas na comunidade local e no acesso a serviços básicos.</p>
-  <p>São Paulo - 4h/semana</p>
-  <p>10 voluntários já se inscreveram</p>
-  <p>Organização: Casa do Migrante</p>
+  </div>
 
 </body>
 </html>
+
