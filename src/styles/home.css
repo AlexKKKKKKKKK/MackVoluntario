@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    height: 100%
+}
+
+#page-header {
+    height: 70px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#header-nav {
+    display: flex;
+}
+
+.header-button {
+    padding: 10px;
+    margin: 10px;
+    height: max-content;
+    width: max-content;
+    border: 0;
+    font: inherit;
+    background-color: white;
+    color:#8d4dc9;
+}
+
+#sign-in-button {
+    background-color: #EBDEFF;
+    border-radius: 16px;
+}
+
+#main-page-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color:#EBDEFF;
+    height: 200px;
+    width: 100%;
+}
+
+#main-text {
+    margin: 15px;
+}
+
+#cards-section {
+    display: flex;
+    justify-content: space-around;
+}
+
+article {
+    border-radius: 16px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: gray;
+    margin: 20px;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px;
+}
+
+.card-main {
+    margin: 15px;
+}
+
+.tag {
+    border-radius: 16px;
+    height: max-content;
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    background-color: #E9DBFF;
+    color:#8d4dc9;
+    font-weight: bold;
+}
+
+.card-footer {
+    margin: 15px;
+    display: flex;
+    align-items: center;
+}
+
+#page-footer {
+    height: 300px;
+    background-color:#F9FAFB;
+}
