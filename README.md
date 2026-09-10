@@ -48,6 +48,7 @@ Fizemos os arquivos HTMLS para as páginas presentes no protótipo inicial home,
 * search.html
 * project.html
 
+Adicionamos o CSS para os HTMLS.
 
 ## 5. Conclusão
 
