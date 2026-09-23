@@ -3,12 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <title>MackVoluntário</title>
-  <link rel="stylesheet" href="src\styles\search.css">
+  <link rel="stylesheet" href="search.css">
 </head>
 <body>
 
   <div id="page-header">
-    <h1>MackVoluntário</h1>
+    <div id="logo-area">
+      <img src="src/commons/M_vermelho.png" alt="Logo Mackenzie" id="logo-img">
+      <h1>MackVoluntário</h1>
+    </div>
     <div id="header-nav">
       <button class="header-button">Projetos</button>
       <button class="header-button">Sobre</button>
@@ -22,16 +25,16 @@
   <h2>Resultados da busca</h2>
   <p>Encontre oportunidades de voluntariado que combinam com seus interesses e habilidades.</p>
 
-  <p>
-    <b>Todas</b> |
-    Educação |
-    Saúde |
-    Meio Ambiente |
-    Comunidade
-  </p>
+  <div id="filter-section">
+    <button class="filter-button active" data-categoria="Todas">Todas</button>
+    <button class="filter-button" data-categoria="Educação">Educação</button>
+    <button class="filter-button" data-categoria="Saúde">Saúde</button>
+    <button class="filter-button" data-categoria="Meio Ambiente">Meio Ambiente</button>
+    <button class="filter-button" data-categoria="Comunidade">Comunidade</button>
+  </div>
 
-  <form>
-    <input type="text" placeholder="Buscar projetos por tema, localização ou organização">
+  <form id="search-form">
+    <input type="text" id="search-input" placeholder="Buscar projetos por tema, localização ou organização">
     <button type="submit">Buscar</button>
   </form>
 
@@ -39,7 +42,7 @@
 
   <div id="cards-section">
 
-    <article class="card">
+    <article class="card" data-categoria="Educação">
       <div class="card-header">
         <h3>Reforço Escolar para Crianças</h3>
         <span class="tag">Educação</span>
@@ -54,7 +57,7 @@
       </div>
     </article>
 
-    <article class="card">
+    <article class="card" data-categoria="Meio Ambiente">
       <div class="card-header">
         <h3>Horta Comunitária Sustentável</h3>
         <span class="tag">Meio Ambiente</span>
@@ -69,7 +72,7 @@
       </div>
     </article>
 
-    <article class="card">
+    <article class="card" data-categoria="Saúde">
       <div class="card-header">
         <h3>Campanha de Doação de Sangue</h3>
         <span class="tag">Saúde</span>
@@ -84,7 +87,7 @@
       </div>
     </article>
 
-    <article class="card">
+    <article class="card" data-categoria="Comunidade">
       <div class="card-header">
         <h3>Apoio a Famílias Refugiadas</h3>
         <span class="tag">Comunidade</span>
@@ -101,6 +104,7 @@
 
   </div>
 
+  <script src="search.js"></script>
+
 </body>
 </html>
-
