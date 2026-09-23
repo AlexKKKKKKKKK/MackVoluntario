@@ -17,6 +17,16 @@ body {
   color: #c8102e;
 }
 
+#logo-area {
+  display: flex;
+  align-items: center;
+}
+
+#logo-img {
+  height: 40px;
+  margin-right: 10px;
+}
+
 #header-nav {
   display: flex;
 }
@@ -34,6 +44,26 @@ body {
 #sign-in-button {
   background-color: #EBDEFF;
   border-radius: 16px;
+}
+
+#filter-section {
+  margin: 20px;
+}
+
+.filter-button {
+  padding: 8px 14px;
+  margin-right: 10px;
+  border: 0;
+  border-radius: 16px;
+  font: inherit;
+  background-color: #EBDEFF;
+  color: #8d4dc9;
+  cursor: pointer;
+}
+
+.filter-button.active {
+  background-color: #4b3fa0;
+  color: #fff;
 }
 
 h2 {
