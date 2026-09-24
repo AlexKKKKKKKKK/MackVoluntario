@@ -1,12 +1,20 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
 body {
     margin: 0;
     height: 100%;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
 }
 
 #page-header {
+    padding: 20px 24px;
     height: 70px;
-    margin: 5px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -28,7 +36,6 @@ body {
 
 .brand-logo {
     height: 32px;
-    width: auto;
     max-width: 40px;
     object-fit: contain;
 }
@@ -40,12 +47,14 @@ body {
     width: max-content;
     border: 0;
     font: inherit;
+    font-weight: 500;
     background-color: white;
-    color:#8d4dc9;
+    color:#581c87;
+    cursor: pointer;
 }
 
 #sign-in-button {
-    background-color: #EBDEFF;
+    background-color: #f3e8ff;
     border-radius: 16px;
 }
 
@@ -60,12 +69,49 @@ body {
 }
 
 #main-text {
-    margin: 15px;
+    margin: 20px;
+}
+
+.search-container {
+    float: center;
+}
+
+input {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+}
+
+#search-button {
+    background-color: white;
+    padding: 6px;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+form {
+    float: right;
+}
+
+#search-icon {
+    width: 18px;
+    height: 18px;
 }
 
 #cards-section {
     display: flex;
     justify-content: space-around;
+}
+
+@media (max-width: 900px) {
+    #cards-section {flex-direction: column;}
+}
+
+a {
+    color:#111111;
+    text-decoration: none;
 }
 
 article {
@@ -94,9 +140,10 @@ article {
     display: flex;
     justify-content: center;
     padding: 5px;
-    background-color: #E9DBFF;
-    color:#8d4dc9;
+    background-color: #f3e8ff;
+    color:#581c87;
     font-weight: bold;
+    padding: 3%;
 }
 
 .card-footer {
@@ -105,7 +152,22 @@ article {
     align-items: center;
 }
 
+.local-icon {
+    width: 24px;
+    height: 24px;
+}
+
 #page-footer {
-    height: 300px;
+    height: 100px;
     background-color:#F9FAFB;
+    box-shadow: 0 50vh 0 50vh #F9FAFB;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.reference {
+    padding: 10px;
+    text-decoration: underline;
 }
