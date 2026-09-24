@@ -1,6 +1,6 @@
-const project = {
+export const project = {
     category: "Educação",
-    image: "https://www.mackenzie.br/fileadmin/user_upload/bibliotecacentral.jpg",
+    image: "./src/commons/biblioteca.jpg",
     imageAlt: "Biblioteca",
 
     title: "Biblioteca Comunitária",
@@ -19,19 +19,3 @@ const project = {
     additionalInfo:
         "Além disso, você terá a oportunidade de interagir com as crianças, entender suas necessidades e contribuir para o desenvolvimento de suas habilidades cognitivas e sociais. Trabalhamos com um método de educação lúdica, garantindo que o aprendizado seja divertido e significativo."
 };
-
-document.querySelector("#category").textContent = project.category;
-
-document.querySelector("#hero-image").src = project.image;
-document.querySelector("#hero-image").alt = project.imageAlt;
-
-document.querySelector("#title").textContent = project.title;
-document.querySelector("#subtitle").textContent = project.subtitle;
-
-document.querySelector("#schedule").textContent = project.schedule;
-document.querySelector("#location").textContent = project.location;
-document.querySelector("#spots").textContent = project.spots;
-document.querySelector("#duration").textContent = project.duration;
-
-document.querySelector("#description").textContent = project.description;
-document.querySelector("#additional-info").textContent = project.additionalInfo;

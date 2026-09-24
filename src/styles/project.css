@@ -26,13 +26,11 @@ body {
 
 .container {
     width: 100%;
-    max-width: 1024px;
     padding: 0 24px 60px;
 }
 
 .navbar {
     width: 100%;
-    max-width: 1024px;
     display: flex;
     justify-content: space-between;
     align-items: center;
