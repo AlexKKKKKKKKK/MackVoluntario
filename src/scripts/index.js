@@ -17,4 +17,4 @@ for (const card of cards) {
 
 let search_button = document.getElementById("search-button")
 
-search_button.onclick = () =>  window.open("./search.html");
+search_button.onclick = () =>  window.location = "./search.html";
