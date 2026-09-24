@@ -8,11 +8,12 @@
 </head>
 <body>
     <header id="page-header">
-        <a href="#" class="brand">
+        <a href="./" class="brand">
             <img src="./src/commons/M_vermelho.png" alt="Mack Logo" class="brand-logo">
             <span>MackVoluntário</span>
         </a>
         <nav id="header-nav">
+            <button class="header-button">Projetos</button>
             <button class="header-button">Sobre</button>
             <button class="header-button">Contato</button>
             <button class="header-button" id="sign-in-button">Entrar</button>
@@ -23,8 +24,14 @@
             <section>
                 <h1>Faça a diferença na sua comunidade</h1>
                 <p>Encontre projetos de voluntariado, conecte-se com organizações locais e transforme vidas.</p>
-                <input type="text" placeholder="Buscar projetos">
-                <button>Buscar</button>
+                <div class="search-container">
+                    <form">
+                        <input type="text" placeholder="Buscar projetos">
+                        <button id="search-button" type="submit">
+                            <img src="./src/commons/search_icon.png" alt="serach-icon" id="search-icon">
+                        </button>
+                    </form>
+                </div>
             </section>
         </section>
         <section id="main-text">
@@ -32,48 +39,69 @@
             <p>Descubra oportundiades para começar a fazer a diferença hoje mesmo.</p>
         </section>
         <section id="cards-section">
-            <article class="cards">
-                <header class="card-header">
-                    <h3>Biblioteca comunitária</h3>
-                    <div class="tag">Educação</div>
-                </header>
-                <main class="card-main">
-                    <p>Ajude na organização de livros e no atendimento de crianças em atividade de leitura e contação de histórias.</p>
-                </main>
-                <footer class="card-footer">
-                    <div>Imagem</div>
-                    <p>São Paulo - 4h/semana</p>
-                </footer>
-            </article>
-            <article class="cards">
-                <header class="card-header">
-                    <h3>Acolhimento de idosos</h3>
-                    <div class="tag">Comunidade</div>
-                </header>
-                <main class="card-main">
-                    <p>Faça visitas, compartilhe histórias e ofereça companhia em um abrigo local, promovendo bem-estar e conexão</p>
-                </main>
-                <footer class="card-footer">
-                    <div>Imagem</div>
-                    <p>Campinas - 2h/semana</p>
-                </footer>
-            </article>
-            <article class="cards">
-                <header class="card-header">
-                    <h3>Limpeza de praia</h3>
-                    <div class="tag">Meio ambiente</div>
-                </header>
-                <main class="card-main">
-                    <p>Participe de mutirões de limpeza, educação ambiental e monitoramento de resíduos em parceria com uma ONG local.</p>
-                </main>
-                <footer class="card-footer">
-                    <div>Imagem</div>
-                    <p>Santos - 1 dia/mês</p>
-                </footer>
-            </article>
+            <a href="./project.html">
+                <article class="cards">
+                    <header class="card-header">
+                        <h3>Biblioteca comunitária</h3>
+                        <div class="tag">Educação</div>
+                    </header>
+                    <main class="card-main">
+                        <p>Ajude na organização de livros e no atendimento de crianças em atividade de leitura e contação de histórias.</p>
+                    </main>
+                    <footer class="card-footer">
+                        <div>
+                            <img src="./src/commons/local_icon.png" alt="place_icon" class="local-icon">
+                        </div>
+                        <p>São Paulo - 4h/semana</p>
+                    </footer>
+                </article>
+            </a>
+            <a href="./">
+                <article class="cards">
+                    <header class="card-header">
+                        <h3>Acolhimento de idosos</h3>
+                        <div class="tag">Comunidade</div>
+                    </header>
+                    <main class="card-main">
+                        <p>Faça visitas, compartilhe histórias e ofereça companhia em um abrigo local, promovendo bem-estar e conexão</p>
+                    </main>
+                    <footer class="card-footer">
+                        <div>
+                            <img src="./src/commons/local_icon.png" alt="place_icon" class="local-icon">
+                        </div>
+                        <p>Campinas - 2h/semana</p>
+                    </footer>
+                </article>
+            </a>
+            <a href="./">
+                <article class="cards">
+                    <header class="card-header">
+                        <h3>Limpeza de praia</h3>
+                        <div class="tag">Meio ambiente</div>
+                    </header>
+                    <main class="card-main">
+                        <p>Participe de mutirões de limpeza, educação ambiental e monitoramento de resíduos em parceria com uma ONG local.</p>
+                    </main>
+                    <footer class="card-footer">
+                        <div>
+                            <img src="./src/commons/local_icon.png" alt="place_icon" class="local-icon">
+                        </div>
+                        <p>Santos - 1 dia/mês</p>
+                    </footer>
+                </article>
+            </a>
         </section>
     </main>
-    <footer id="page-footer"></footer>
+    <footer id="page-footer">
+        <ul>
+            <li>
+                <a href="https://www.flaticon.com/free-icons/search" title="search icons" class="reference">Search icons created by Chanut - Flaticon</a>
+            </li>
+            <li>
+                    <a href="https://www.flaticon.com/free-icons/local" title="local icons" class="reference">Local icons created by Radhe Icon - Flaticon</a>
+            </li>
+        </ul>    
+    </footer>
     <script src="src\scripts\index.js"></script>
 </body>
 </html>
