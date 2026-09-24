@@ -14,3 +14,7 @@ const cards = document.getElementsByClassName('cards');
 for (const card of cards) {
     addLiftEffect(card);
 }
+
+let search_button = document.getElementById("search-button")
+
+search_button.onclick = () =>  window.open("./search.html");
