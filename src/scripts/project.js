@@ -1,4 +1,9 @@
-import { project } from "./main.js";
+import { projects } from "./main.js";
+
+const params = new URLSearchParams(window.location.search);
+const id = Number(params.get("id"));
+
+const project = projects.find(project => project.id === id);
 
 document.querySelector("#category").textContent = project.category;
 

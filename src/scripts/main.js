@@ -1,4 +1,5 @@
-export const project = {
+export const projects = [{
+    id: 1,
     category: "Educação",
     image: "./src/commons/biblioteca.jpg",
     imageAlt: "Biblioteca",
@@ -18,4 +19,4 @@ export const project = {
 
     additionalInfo:
         "Além disso, você terá a oportunidade de interagir com as crianças, entender suas necessidades e contribuir para o desenvolvimento de suas habilidades cognitivas e sociais. Trabalhamos com um método de educação lúdica, garantindo que o aprendizado seja divertido e significativo."
-};
+}];
