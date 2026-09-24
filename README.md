@@ -50,7 +50,7 @@ Fizemos os arquivos HTMLS para as páginas presentes no protótipo inicial home,
 
 Adicionamos o CSS para os HTMLS.
 
-Adicionamos interatividade à Home e na parte de Projeto as informações são preenchidas dinamicamente.
+Adicionamos interatividade à Home com um botão para busca e o arredondamento das bordas dos cards, na busca foi adicionado uma barra de busca funcional e filtros para pesquisa e na parte de Projeto as informações são preenchidas dinamicamente.
 
 ## 5. Conclusão
 
