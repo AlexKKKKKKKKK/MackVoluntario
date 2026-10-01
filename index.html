@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MackVoluntario</title>
     <link rel="stylesheet" href="src/styles/index.css">
+    <script src="/src/scripts/index_add_query" defer></script>
 </head>
 <body>
     <header id="page-header">
@@ -24,14 +25,11 @@
             <section>
                 <h1 id="front-title">Faça a diferença na sua comunidade</h1>
                 <p class="secondary-text">Encontre projetos de voluntariado, conecte-se com organizações locais e transforme vidas.</p>
-                <div id="search-container">
-                    <form id="search-form">
-                        <input type="text" placeholder="Buscar projetos" id="search-text-input">
-                            <button id="search-button" type="submit">
-                                <img src="./src/commons/search_icon.png" alt="serach-icon" id="search-icon">
-                            </button>
-                        </input>
-                    </form>
+                <div id="search-container"> 
+                    <input type="text" placeholder="Buscar projetos" id="search-text-input">
+                        <button id="search-button" onclick="addQuery()">
+                            <img src="./src/commons/search_icon.png" alt="serach-icon" id="search-icon">
+                        </button>
                 </div>
             </section>
         </section>
@@ -51,6 +49,6 @@
             </li>
         </ul>    
     </footer>
-    <script type="module" src="src\scripts\index.js"></script>
+    <script type="module" src="src\scripts\index_load_cards.js"></script>
 </body>
 </html>
