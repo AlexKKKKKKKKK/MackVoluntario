@@ -15,11 +15,6 @@ for (let i = 0; i < cards.length; i++) {
     addLiftEffect(cards[i].firstChild);
 }
 
-let search_button = document.getElementById("search-button")
-
-search_button.onclick = () =>  window.location = "./search.html";
-
-
 function createCard(project) {
     let card = document.createElement("a");
     card.href = "./project.html" + "?id=" + String(project.id);
@@ -59,6 +54,7 @@ function createCard(project) {
     main.appendChild(p);
 
     p.innerHTML = project.subtitle;
+    p.className = "secondary-text";
 
 
     let footer = document.createElement("footer");
@@ -83,6 +79,7 @@ function createCard(project) {
     footer.appendChild(p);
 
     p.innerHTML = project.location;
+    p.className = "secondary-text";
 
     card.style.width -= 20;
     return card;
