@@ -112,7 +112,7 @@ body {
     background-color: white;
     padding: 6px;
     border: none;
-    transform: translate(-36px, 0.8px);
+    transform: translate(-40px, 5px);
     cursor: pointer;
 }
 
