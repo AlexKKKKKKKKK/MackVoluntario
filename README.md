@@ -43,14 +43,7 @@ Por meio da aplicação, buscamos contribuir para que mais pessoas tenham acesso
 Dessa forma, o projeto busca utilizar a tecnologia como uma ferramenta para gerar impacto social.
 
 ## 4. Tutorial de Desenvolvimento
-Fizemos os arquivos HTMLS para as páginas presentes no protótipo inicial home, busca e informações de projeto.
-* index.html
-* search.html
-* project.html
 
-Adicionamos o CSS para os HTMLS.
-
-Adicionamos interatividade à Home com um botão para busca e o arredondamento das bordas dos cards, na busca foi adicionado uma barra de busca funcional e filtros para pesquisa e na parte de Projeto as informações são preenchidas dinamicamente.
 
 ## 5. Conclusão
 
