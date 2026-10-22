@@ -190,7 +190,7 @@ export default function Home() {
         <section id="main-page-section">
             <section>
                 <h1 id="front-title">Faça a diferença na sua comunidade</h1>
-                <p class="secondary-text">Encontre projetos de voluntariado, conecte-se com organizações locais e transforme vidas.</p>
+                <p className="secondary-text">Encontre projetos de voluntariado, conecte-se com organizações locais e transforme vidas.</p>
                 <div id="search-container">
                     <input
                       value={texto}
