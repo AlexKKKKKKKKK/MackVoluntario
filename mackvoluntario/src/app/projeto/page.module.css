@@ -1,0 +1,102 @@
+.heroBanner {
+    position: relative;
+    width: 100%;
+    height: 360px;
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    margin-top: 10px;
+    margin-bottom: 32px;
+}
+
+.heroBanner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.categoryBadge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background-color: rgba(233, 213, 255, 0.9);
+    color: #581c87;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    backdrop-filter: blur(4px);
+}
+
+.projectHeader {
+    margin-bottom: 32px;
+}
+
+.projectTitle {
+    font-size: 1.85rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--text-main);
+}
+
+.projectSubtitle {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 900px;
+}
+
+.infoGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+.infoCard {
+    background-color: var(--card-bg);
+    padding: 16px;
+    border-radius: var(--border-radius-md);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.infoCardLabel {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.infoCardValue {
+    font-size: 0.85rem;
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+.aboutSection h2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--text-main);
+}
+
+.aboutSection p {
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+    .infoGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .heroBanner {
+        height: 240px;
+    }
+}
+
+.container {
+    width: 100%;
+    padding: 0 24px 60px;
+}
