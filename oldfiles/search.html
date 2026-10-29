@@ -1,124 +1,51 @@
-<!DOCTYPE html> <html lang="pt-br"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MackVoluntário</title>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MackVoluntario</title>
 
-<link rel="stylesheet" href="./src/styles/main.css">
-<link rel="stylesheet" href="./src/styles/search.css">
+    <link rel="stylesheet" href="./src/styles/main.css">
+    <link rel="stylesheet" href="./src/styles/search.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="./index.html" class="brand">
+            <img src="./src/commons/M_vermelho.png" alt="Mack Logo" class="brand-logo">
+            <span>MackVoluntário</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="./search.html">Projetos</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Contato</a></li>
+            <li><a href="#" class="btn-login">Entrar</a></li>
+        </ul>
+    </header>
 
-</head> <body>
-<header class="navbar">
-    <a href="./index.html" class="brand">
-        <img
-            src="./src/commons/M_vermelho.png"
-            alt="Mack Logo"
-            class="brand-logo"
-        >
+    <main class="container">
+        <section class="search-header">
+            <h1>Resultados da busca</h1>
+            <p>Encontre oportunidades de voluntariado que combinam com seus interesses e habilidades.</p>
+        </section>
 
-        <span>MackVoluntário</span>
-    </a>
+        <!-- Os botões são criados pelo search.js a partir das categorias dos projetos -->
+        <section class="filter-section" id="filter-section" aria-label="Filtrar por categoria"></section>
 
-    <ul class="nav-links">
-        <li><a href="#">Projetos</a></li>
-        <li><a href="#">Sobre</a></li>
-        <li><a href="#">Contato</a></li>
-        <li>
-            <a href="#" class="btn-login">Entrar</a>
-        </li>
-    </ul>
-</header>
+        <form id="search-form" class="search-form">
+            <input
+                type="text"
+                id="search-input"
+                placeholder="Buscar projetos por tema, local ou horário"
+                aria-label="Buscar projetos"
+                autocomplete="off"
+            >
+            <button type="submit" class="search-button">Buscar</button>
+        </form>
 
+        <!-- Os cards são criados pelo search.js -->
+        <section id="cards-section" class="cards-section"></section>
+    </main>
 
-<main class="container">
-
-    <section class="search-header">
-        <h1>Resultados da busca</h1>
-
-        <p>
-            Encontre oportunidades de voluntariado que combinam
-            com seus interesses e habilidades.
-        </p>
-    </section>
-
-
-    <section class="filter-section" id="filter-section">
-
-        <button
-            type="button"
-            class="filter-button active"
-            data-categoria="Todas"
-        >
-            Todas
-        </button>
-
-        <button
-            type="button"
-            class="filter-button"
-            data-categoria="Educação"
-        >
-            Educação
-        </button>
-
-        <button
-            type="button"
-            class="filter-button"
-            data-categoria="Saúde"
-        >
-            Saúde
-        </button>
-
-        <button
-            type="button"
-            class="filter-button"
-            data-categoria="Meio Ambiente"
-        >
-            Meio Ambiente
-        </button>
-
-        <button
-            type="button"
-            class="filter-button"
-            data-categoria="Assistência Social"
-        >
-            Assistência Social
-        </button>
-
-    </section>
-
-
-    <form id="search-form" class="search-form">
-
-        <input
-            type="text"
-            id="search-input"
-            placeholder="Buscar projetos por tema, localização ou organização"
-            autocomplete="off"
-        >
-
-        <button
-            type="submit"
-            class="search-button"
-        >
-            Buscar
-        </button>
-
-    </form>
-
-
-    <section
-        id="cards-section"
-        class="cards-section"
-    >
-        <!--
-            Os cards são gerados dinamicamente
-            pelo search.js.
-        -->
-    </section>
-
-</main>
-
-
-<script
-    type="module"
-    src="./src/scripts/search.js"
-></script>
-
-</body> </html>
+    <script type="module" src="./src/scripts/search.js"></script>
+</body>
+</html>
