@@ -1,0 +1,44 @@
+.card {
+    color:#111111;
+    text-decoration: none;
+    border-radius: 16px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: gray;
+    margin: 20px;
+}
+
+.cardHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px;
+}
+
+.cardMain {
+    margin: 15px;
+}
+
+.tag {
+    border-radius: 16px;
+    height: max-content;
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    background-color: var(--tag-bg-color);
+    color: var(--tag-text-color);
+    font-weight: 600;
+    padding: 3%;
+}
+
+.cardFooter {
+    margin: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.localIcon {
+    width: 24px;
+    height: 24px;
+}

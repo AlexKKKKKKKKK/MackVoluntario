@@ -2,8 +2,8 @@
 
 import styles from "./botao.module.css";
 
-export default function Botao({onClick, disabled, children}) {
+export default function Botao({onClick, children}) {
     return(
-        <button onClick={onClick} disabled={disabled}>{children}</button>
+        <button onClick={onClick}>{children}</button>
     )
 }

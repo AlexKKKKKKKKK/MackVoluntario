@@ -1,3 +1,91 @@
-.secondary-text {
+:root {
+    --text-main-color: #111827;
+    --text-secondary-color: #4C4852;
+    --tag-text-color: #581c87;
+    --tag-bg-color: #f3e8ff;
+}
+
+.main {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text-main);
+    text-align: center;
+    background-color:#EBDEFF;
+    height: 360px;
+    width: 100%;
+    padding: 0 24px ;
+}
+
+.secondaryText {
     color: var(--text-secondary-color);
+}
+
+.frontTitle {
+    font-size: 48px;
+}
+
+
+#main-text {
+    margin: 20px;
+    text-align: left;
+}
+
+.searchContainer {
+    min-width: 100px;
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0;
+}
+
+.searchTextInput {
+    width: 500px;
+    height: 50px;
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+    border-radius: 24px;
+}
+
+.cardsSection {
+    display: flex;
+    justify-content: space-around;
+}
+
+@media (max-width: 900px) {
+    #cards-section {flex-direction: column;}
+}
+
+.Link {
+    color:#111111;
+    text-decoration: none;
+}
+
+.article {
+    border-radius: 16px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: gray;
+    margin: 20px;
+}
+
+#page-footer {
+    background-color:#F9FAFB;
+    width: 100vw;
+    height: 50px;
+    position: relative;
+    box-shadow: 0 1vh 0 1vh #F9FAFB;;
+}
+
+.ul {
+    list-style-type: none;
+}
+
+.reference {
+    padding: 10px;
+    text-decoration: underline;
 }

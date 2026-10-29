@@ -1,0 +1,12 @@
+#search-button {
+    background-color: white;
+    padding: 6px;
+    border: none;
+    transform: translate(-40px, 5px);
+    cursor: pointer;
+}
+
+#search-icon {
+    width: 18px;
+    height: 18px;
+}
