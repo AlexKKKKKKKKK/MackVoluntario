@@ -1,87 +1,107 @@
 import { projects } from "./main.js";
 
-const botoesFiltro = document.querySelectorAll(".filter-button");
+const filterSection = document.getElementById("filter-section");
 const cardsSection = document.getElementById("cards-section");
 const form = document.getElementById("search-form");
 const input = document.getElementById("search-input");
 
 let categoriaSelecionada = "Todas";
 
+/* Remove acentos e maiúsculas: "educacao" encontra "Educação" */
+function normalizar(texto) {
+    return String(texto)
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase();
+}
+
 /* =========================
-CRIAÇÃO DOS CARDS
+FILTROS (gerados a partir dos dados)
+========================= */
+
+function criarFiltros() {
+    const categorias = ["Todas", ...new Set(projects.map(p => p.category))];
+
+    categorias.forEach(function (categoria) {
+        const botao = document.createElement("button");
+        botao.type = "button";
+        botao.className = "filter-button";
+        botao.textContent = categoria;
+        botao.dataset.categoria = categoria;
+        botao.setAttribute("aria-pressed", categoria === "Todas");
+
+        if (categoria === "Todas") {
+            botao.classList.add("active");
+        }
+
+        botao.addEventListener("click", function () {
+            filterSection.querySelectorAll(".filter-button").forEach(function (b) {
+                b.classList.remove("active");
+                b.setAttribute("aria-pressed", "false");
+            });
+
+            botao.classList.add("active");
+            botao.setAttribute("aria-pressed", "true");
+
+            categoriaSelecionada = categoria;
+            filtrarProjetos();
+        });
+
+        filterSection.appendChild(botao);
+    });
+}
+
+/* =========================
+CARDS (mesma estrutura da home: <a> > article)
 ========================= */
 
 function criarCard(project) {
-const card = document.createElement("article");
+    const link = document.createElement("a");
+    link.className = "card-link";
+    link.href = `./project.html?id=${project.id}`;
 
-card.classList.add("card");
-card.setAttribute("data-categoria", project.category);
+    link.innerHTML = `
+        <article class="card">
+            <header class="card-header">
+                <h3>${project.title}</h3>
+                <div class="tag">${project.category}</div>
+            </header>
 
-card.innerHTML = `
-    <div class="card-header">
-        <h2>${project.title}</h2>
-        <span class="tag">${project.category}</span>
-    </div>
+            <div class="card-main">
+                <p>${project.subtitle}</p>
+            </div>
 
-    <div class="card-main">
-        <p>${project.subtitle}</p>
-
-        <span class="card-location">
-            ${project.location} - ${project.schedule}
-        </span>
-    </div>
-
-    <div class="card-footer">
-        <span>
-            ${project.spots}
-        </span>
-
-        <span>
-            Duração: ${project.duration}
-        </span>
-    </div>
-`;
-
-/*
- * Ao clicar no card, abre a página
- * do projeto utilizando o ID.
- */
-card.addEventListener("click", function () {
-    window.location.href = `project.html?id=${project.id}`;
-});
-
-return card;
-
-
-}
-
-/* =========================
-RENDERIZAÇÃO
-========================= */
-
-function renderizarProjetos(lista) {
-cardsSection.innerHTML = "";
-
-if (lista.length === 0) {
-    cardsSection.innerHTML = `
-        <div class="empty-state">
-            <h2>Nenhum projeto encontrado</h2>
-            <p>
-                Tente buscar por outro termo ou
-                selecionar uma categoria diferente.
-            </p>
-        </div>
+            <footer class="card-footer">
+                <div class="card-place">
+                    <img src="./src/commons/local_icon.png" alt="" class="local-icon">
+                    <span>${project.location}</span>
+                </div>
+                <span>${project.schedule}</span>
+                <span>${project.spots}</span>
+                <span>Duração: ${project.duration}</span>
+            </footer>
+        </article>
     `;
 
-    return;
+    return link;
 }
 
-lista.forEach(function (project) {
-    const card = criarCard(project);
-    cardsSection.appendChild(card);
-});
+function renderizarProjetos(lista) {
+    cardsSection.innerHTML = "";
 
+    if (lista.length === 0) {
+        cardsSection.innerHTML = `
+            <div class="empty-state">
+                <h2>Nenhum projeto encontrado</h2>
+                <p>Tente buscar por outro termo ou selecionar uma categoria diferente.</p>
+            </div>
+        `;
+        return;
+    }
 
+    lista.forEach(function (project) {
+        cardsSection.appendChild(criarCard(project));
+    });
 }
 
 /* =========================
@@ -89,121 +109,65 @@ FILTRO E BUSCA
 ========================= */
 
 function filtrarProjetos() {
+    const texto = normalizar(input.value.trim());
 
-const texto = input.value
-    .trim()
-    .toLowerCase();
+    const resultados = projects.filter(function (project) {
+        const correspondeCategoria =
+            categoriaSelecionada === "Todas" ||
+            project.category === categoriaSelecionada;
 
-const resultados = projects.filter(function (project) {
+        const conteudo = normalizar(`
+            ${project.title}
+            ${project.category}
+            ${project.subtitle}
+            ${project.location}
+            ${project.schedule}
+            ${project.duration}
+            ${project.description}
+            ${project.additionalInfo}
+        `);
 
-    /*
-     * Verifica a categoria.
-     */
-    const correspondeCategoria =
-        categoriaSelecionada === "Todas" ||
-        project.category === categoriaSelecionada;
+        return correspondeCategoria && (texto === "" || conteudo.includes(texto));
+    });
 
-
-    /*
-     * Junta os campos relevantes
-     * para realizar a busca.
-     */
-    const conteudo = `
-        ${project.title}
-        ${project.category}
-        ${project.subtitle}
-        ${project.location}
-        ${project.schedule}
-        ${project.duration}
-        ${project.description}
-        ${project.additionalInfo}
-    `.toLowerCase();
-
-
-    /*
-     * Se não houver texto, todos passam.
-     */
-    const correspondeBusca =
-        texto === "" ||
-        conteudo.includes(texto);
-
-
-    return correspondeCategoria && correspondeBusca;
-});
-
-
-renderizarProjetos(resultados);
-
-
+    renderizarProjetos(resultados);
 }
 
 /* =========================
-FILTROS DE CATEGORIA
-========================= */
-
-botoesFiltro.forEach(function (botao) {
-
-botao.addEventListener("click", function () {
-
-    botoesFiltro.forEach(function (b) {
-        b.classList.remove("active");
-    });
-
-    botao.classList.add("active");
-
-    categoriaSelecionada =
-        botao.getAttribute("data-categoria");
-
-    filtrarProjetos();
-});
-
-
-});
-
-/* =========================
-BUSCA
+BUSCA (formulário)
 ========================= */
 
 form.addEventListener("submit", function (evento) {
+    evento.preventDefault();
 
-evento.preventDefault();
+    const texto = input.value.trim();
+    const url = new URL(window.location.href);
 
-const texto = input.value.trim();
+    if (texto) {
+        url.searchParams.set("query", texto);
+    } else {
+        url.searchParams.delete("query");
+    }
 
-/*
- * Atualiza o parâmetro "query" da URL.
- */
-const url = new URL(window.location.href);
-
-if (texto) {
-    url.searchParams.set("query", texto);
-} else {
-    url.searchParams.delete("query");
-}
-
-window.history.pushState({}, "", url);
-
-filtrarProjetos();
-
-
+    window.history.pushState({}, "", url);
+    filtrarProjetos();
 });
 
-/* =========================
-QUERY DA URL
-========================= */
-
-const parametros = new URLSearchParams(
-window.location.search
-);
-
-const query = parametros.get("query");
-
-if (query) {
-input.value = query;
-}
+/* Botões voltar/avançar do navegador */
+window.addEventListener("popstate", function () {
+    input.value = new URLSearchParams(window.location.search).get("query") || "";
+    filtrarProjetos();
+});
 
 /* =========================
 INICIALIZAÇÃO
 ========================= */
+
+criarFiltros();
+
+const queryInicial = new URLSearchParams(window.location.search).get("query");
+if (queryInicial) {
+    input.value = queryInicial;
+}
 
 filtrarProjetos();
