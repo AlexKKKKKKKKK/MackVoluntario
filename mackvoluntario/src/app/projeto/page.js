@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Navbar from "@/componentes/navbar/navbar";
 
 const project = {
     category: "Educação",
@@ -17,6 +18,8 @@ const project = {
 
 export default function Project(){
     return(
+        <>
+        <Navbar/>
         <main className={styles.container}>
             <section className={styles.heroBanner}>
                 <span className={styles.categoryBadge}>
@@ -73,5 +76,6 @@ export default function Project(){
                 <p>{project.additionalInfo}</p>
             </section>
         </main>
+        </>
     );
 }

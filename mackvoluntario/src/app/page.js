@@ -5,6 +5,7 @@ import Link from "next/link";
 import React, { useEffect } from 'react';
 import Botao from "../componentes/botao/botao";
 import Card from "@/componentes/card/card";
+import Navbar from "@/componentes/navbar/navbar";
 
 const projects = [{
     id: 1,
@@ -89,6 +90,8 @@ export default function Home() {
   // Adiciona o efeito de hover nos cards (PENDENTE)
 
   return (
+    <>
+    <Navbar />
     <main>
         <section className={styles.main}>
             <section>
@@ -116,5 +119,6 @@ export default function Home() {
             {projects.map((project) => (<Card project={project}></Card>))}
         </section>
     </main>
+    </>
   );
 }
