@@ -6,11 +6,13 @@ import React, { useEffect } from 'react';
 import Botao from "../componentes/botao/botao";
 import Card from "@/componentes/card/card";
 import Navbar from "@/componentes/navbar/navbar";
-import projects from "@/data/projects.json";
 import { useRouter } from "next/navigation";
+import { getProjects } from "@/services/project.service";
 
 
 let searchURL = "";
+
+let projects = await getProjects();
 
 
 export default function Home() {
