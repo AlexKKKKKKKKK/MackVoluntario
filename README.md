@@ -44,6 +44,7 @@ Dessa forma, o projeto busca utilizar a tecnologia como uma ferramenta para gera
 
 ## 4. Tutorial de Desenvolvimento
 
+Começamos a refatoração implementando o html das páginas em React e separamos os componentes que são usados em todas as telas como a Navbar, botão e card, fazendo seus jsx e component.module.css.
 
 ## 5. Conclusão
 
