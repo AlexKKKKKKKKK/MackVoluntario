@@ -1,18 +1,29 @@
-import projects from "@/data/projects.json";
+const API_URL = process.env.NEXT_PUBLIC_APP_URL;
 
 export async function getProjects() {
-    return projects;
+    const response = await fetch(`${API_URL}/api/projects`, {
+        cache: "no-store",
+    });
+
+    if (!response.ok) {
+        throw new Error("Failed to fetch projects");
+    }
+
+    return response.json();
 }
 
 export async function getProjectById(id) {
-    console.log("Searching for ID:", id);
-    console.log("Available projects:", projects);
+    const response = await fetch(`${API_URL}/api/projects/${id}`, {
+        cache: "no-store",
+    });
 
-    const project = projects.find(
-        (project) => String(project.id) === String(id)
-    );
+    if (response.status === 404) {
+        return null;
+    }
 
-    console.log("Found project:", project);
+    if (!response.ok) {
+        throw new Error("Failed to fetch project");
+    }
 
-    return project || null;
+    return response.json();
 }

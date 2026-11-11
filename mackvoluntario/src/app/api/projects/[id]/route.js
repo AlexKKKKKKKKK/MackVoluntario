@@ -1,11 +1,11 @@
 import { NextResponse } from "next/server";
-import { getProjectById } from "@/services/project.service";
+import { findProjectById } from "@/repository/project.repository";
 
 export async function GET(request, { params }) {
   try {
     const { id } = await params;
 
-    const project = await getProjectById(id);
+    const project = await findProjectById(id);
 
     if (!project) {
       return NextResponse.json(

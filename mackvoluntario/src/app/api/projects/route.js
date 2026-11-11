@@ -1,9 +1,9 @@
 import { NextResponse } from "next/server";
-import { getProjects } from "@/services/project.service";
+import { findAllProjects } from "@/repository/project.repository";
 
 export async function GET() {
   try {
-    const projects = await getProjects();
+    const projects = await findAllProjects();
 
     return NextResponse.json(projects);
   } catch (error) {
