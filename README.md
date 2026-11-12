@@ -46,7 +46,7 @@ Dessa forma, o projeto busca utilizar a tecnologia como uma ferramenta para gera
 
 Começamos a refatoração implementando o html das páginas em React e separamos os componentes que são usados em todas as telas como a Navbar, botão e card, fazendo seus jsx e component.module.css.
 
-Fizemos as páginas carregarem o conteudo dinamicamente de acordo com query feita na URL.
+Fizemos as páginas carregarem o conteúdo dinamicamente de acordo com query feita na URL, puxando os dados da API.
 
 ## 5. Conclusão
 
