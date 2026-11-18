@@ -1,11 +1,20 @@
 .card {
-    color:#111111;
+    color: var(--text-main);
     text-decoration: none;
     border-radius: 16px;
     border-style: solid;
     border-width: 1px;
     border-color: gray;
-    margin: 20px;
+    width: 100%;
+    box-sizing: border-box;
+
+    @media (prefers-color-scheme: dark) {
+        color: white;
+    }
+}
+
+.secondaryText {
+    color: var(--text-muted);
 }
 
 .cardHeader {
@@ -36,6 +45,7 @@
     margin: 15px;
     display: flex;
     align-items: center;
+    color: var(--text-main);
 }
 
 .localIcon {

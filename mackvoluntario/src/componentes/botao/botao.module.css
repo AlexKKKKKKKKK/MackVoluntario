@@ -1,12 +1,9 @@
-#search-button {
-    background-color: white;
+.searchButton {
     padding: 6px;
     border: none;
     transform: translate(-40px, 5px);
     cursor: pointer;
-}
-
-#search-icon {
-    width: 18px;
-    height: 18px;
+    @media (prefers-color-scheme: light) {
+        background-color: white;
+    }
 }

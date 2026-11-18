@@ -1,35 +1,52 @@
-:root {
-    --text-main-color: #111827;
-    --text-secondary-color: #4C4852;
-    --tag-text-color: #581c87;
-    --tag-bg-color: #f3e8ff;
+.container {
+    width: 100%;
+    padding: 0 24px 60px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
+
 .main {
-    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: 0;
-    padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     color: var(--text-main);
-    text-align: center;
-    background-color:#EBDEFF;
+    background: linear-gradient(
+        110deg,
+        #f8f9fb 0%,
+        #f2edfc 45%,
+        #e8d8ff 100%
+    );
     height: 360px;
     width: 100%;
-    padding: 0 24px ;
+    padding: 0 24px 60px;
+    margin-bottom: 32px;
+
+    @media (prefers-color-scheme: dark) {
+        background: linear-gradient(
+        110deg,
+        #17171d 0%,
+        #201b2c 45%,
+        #302044 100%
+        );
+    }
 }
 
 .secondaryText {
-    color: var(--text-secondary-color);
+    color: var(--text-muted);
 }
 
 .frontTitle {
     font-size: 48px;
+    color: var(--text-main);
 }
 
 
-#main-text {
-    margin: 20px;
-    text-align: left;
+.mainText {
+    font-size: 1.85rem;
+    font-weight: 700;
+    color: var(--text-main);
 }
 
 .searchContainer {
@@ -52,12 +69,16 @@
 }
 
 .cardsSection {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 40px;
+    margin-top: 20px;
 }
 
 @media (max-width: 900px) {
-    #cards-section {flex-direction: column;}
+    .cardsSection {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 .Link {
@@ -71,21 +92,4 @@
     border-width: 1px;
     border-color: gray;
     margin: 20px;
-}
-
-#page-footer {
-    background-color:#F9FAFB;
-    width: 100vw;
-    height: 50px;
-    position: relative;
-    box-shadow: 0 1vh 0 1vh #F9FAFB;;
-}
-
-.ul {
-    list-style-type: none;
-}
-
-.reference {
-    padding: 10px;
-    text-decoration: underline;
 }

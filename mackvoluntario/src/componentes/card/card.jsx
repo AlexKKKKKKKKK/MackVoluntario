@@ -2,7 +2,7 @@
 
 import styles from "./card.module.css";
 import Link from "next/link";
-
+import Image from "next/image";
 
 let projectURL = "";
 
@@ -19,8 +19,15 @@ export default function Card({project}) {
                 </main>
                 <footer className={styles.cardFooter}>
                     <div>
+                        <Image 
+                            src={"/local_icon.png"}
+                            alt={"local icon"}
+                            width={24}
+                            height={24}
+                            >
+                        </Image>
                     </div>
-                    <p className={styles.secondaryText}>{project.location}</p>
+                    <p>{project.location}</p>
                 </footer>
             </article>
         </Link>
